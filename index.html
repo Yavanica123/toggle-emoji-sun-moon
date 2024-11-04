@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Emoji</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(228, 228, 108);
+            
+        }
+        h1 {
+            font-size: 300px;
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .black {
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="color">
+    <h1 id="sun" class="show" onclick="change()">&#127774;</h1>
+    <h1 id="moon" onclick="change()">&#127769;</h1>
+    <script>
+        function change() {
+            document.getElementById('sun').classList.toggle('show');
+            document.getElementById('moon').classList.toggle('show');
+            document.body.classList.toggle('black');
+        }
+    </script>
+</body>
+</html>
